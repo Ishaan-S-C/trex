@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: sans-serif;
+}
+
+#game {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    border: 2px solid #000;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#dino {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 44px;
+    height: 47px;
+    background: url('dino-sprite.png') no-repeat;
+    background-size: cover;
+}
+
+#cactus {
+    position: absolute;
+    bottom: 0;
+    right: -34px;
+    width: 34px;
+    height: 70px;
+    background: url('cactus-sprite2.png') no-repeat;
+    background-size: cover;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#reset-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 150px; } /* Increased jump height */
+    100% { bottom: 0; }
+}
+
+.jump {
+    animation: jump 0.5s linear; /* Increased duration for a smoother jump */
+}
